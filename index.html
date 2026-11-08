@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINOUS Botanicals - Đánh thức vẻ đẹp nguyên bản</title>
+    
+    <!-- Fonts: Playfair Display cho tiêu đề (sang trọng), Inter cho nội dung (dễ đọc) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<div class="product-card">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Cấu hình màu sắc đặc trưng của thương hiệu -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sage: {
+                            50: '#f4f7f4',
+                            100: '#e3ebd9', /* Xanh rêu nhạt - background */
+                            500: '#8f9e86', /* Xanh rêu - primary */
+                            800: '#4a5742',
+                            900: '#333d2d', /* Xanh rêu đậm - text */
+                        },
+                        amber: {
+                            400: '#e89a3c', /* Cam nắng */
+                            500: '#d97736', /* Nâu hổ phách */
+                            600: '#bf6326',
+                        },
+                        sand: '#fcfbf9' /* Màu nền be nhạt thay vì trắng tinh */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tùy chỉnh CSS thêm cho độ mượt mà */
+        body { background-color: #fcfbf9; }
+        .hero-bg {
+            background: linear-gradient(to right bottom, #e3ebd9, #f4f7f4);
+        }
+        .fade-in { animation: fadeIn 1s ease-in forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-sage-900 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full bg-sand/90 backdrop-blur-md z-50 border-b border-sage-100 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="#" class="font-serif text-2xl md:text-3xl font-bold tracking-wide text-sage-900">
+                LUMINOUS<span class="text-sage-500 font-sans text-sm md:text-base font-normal tracking-widest block md:inline md:ml-2">BOTANICALS</span>
+            </a>
+            
+            <!-- Nút Mua Ngay -->
+            <a href="#order" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors shadow-sm hover:shadow-md">
+                Mua Ngay
+            </a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-bg pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Nội dung chữ -->
+                <div class="w-full md:w-1/2 z-10 fade-in text-center md:text-left">
+                    <p class="text-amber-500 font-semibold tracking-widest uppercase text-sm mb-4">Tinh túy từ thiên nhiên</p>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-sage-900">
+                        Đánh thức vẻ đẹp <br><span class="italic text-sage-800">nguyên bản</span>
+                    </h1>
+                    <p class="text-sage-800/80 text-lg mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
+                        Mượn sức mạnh chữa lành từ thảo mộc thiên nhiên, Luminous mang đến luồng ánh sáng rực rỡ, trả lại cho bạn làn da căng khỏe, thuần khiết vốn có.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#product" class="bg-sage-900 hover:bg-sage-800 text-white px-8 py-3.5 rounded-full font-medium transition-all shadow-lg hover:shadow-xl">
+                            Khám Phá Sản Phẩm
+                        </a>
+                        <a href="#order" class="bg-white hover:bg-sage-50 text-sage-900 border border-sage-200 px-8 py-3.5 rounded-full font-medium transition-all text-center">
+                            Nhận Ưu Đãi
+                        </a>
+                    </div>
+                </div>
+                
+                <!--  -->
+                <div class="w-full md:w-1/2 relative fade-in" style="animation-delay: 0.2s;">
+                    <!-- Vòng tròn trang trí phía sau ảnh -->
+                    <div class="absolute inset-0 bg-sage-500/20 rounded-full blur-3xl transform scale-75 translate-x-10 translate-y-10"></div>
+                    <img src="https://placehold.co/600x750/d97736/ffffff?text=LUMINOUS\nSerum+Image" alt="Luminous Natural Glow Serum" class="relative z-10 w-full max-w-md mx-auto rounded-[2rem] shadow-2xl object-cover object-center border-4 border-white/50">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Giới thiệu Sản Phẩm (Hero Product) -->
+    <section id="product" class="py-24 bg-sand">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">LUMINOUS Natural Glow Serum</h2>
+                <div class="w-20 h-1 bg-amber-400 mx-auto mb-6"></div>
+                <p class="text-sage-800/80 text-lg">Giọt tinh chất vàng chứa đựng sức mạnh từ Vitamin C nguyên chất và chiết xuất hoa cúc, nuôi dưỡng làn da sáng khỏe rạng ngời từ sâu bên trong.</p>
+            </div>
+
+            <!-- Core Values -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+                <!-- Value 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-sage-50 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 mx-auto bg-sage-100 rounded-full flex items-center justify-center mb-6 text-sage-800">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-3 text-sage-900">Thuần Khiết</h3>
+                    <p class="text-sage-800/70 text-sm leading-relaxed">Không cồn, không hương liệu nhân tạo. 100% chiết xuất thực vật lành tính, an toàn tuyệt đối cho cả làn da nhạy cảm nhất.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-sage-50 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 mx-auto bg-amber-50 rounded-full flex items-center justify-center mb-6 text-amber-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-3 text-sage-900">Chữa Lành</h3>
+                    <p class="text-sage-800/70 text-sm leading-relaxed">Sự kết hợp của chiết xuất hoa cúc giúp xoa dịu mẩn đỏ, phục hồi hàng rào bảo vệ da và xóa tan dấu hiệu mệt mỏi.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-sage-50 text-center hover:shadow-md transition-shadow">
+                    <div class="w-16 h-16 mx-auto bg-sage-100 rounded-full flex items-center justify-center mb-6 text-sage-800">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold mb-3 text-sage-900">Thân Thiện Môi Trường</h3>
+                    <p class="text-sage-800/70 text-sm leading-relaxed">Sử dụng chai thủy tinh tối màu có thể tái chế, nắp tre tự nhiên. Làm đẹp cho mình và giữ gìn màu xanh cho Trái Đất.</p>
+                </div>
+            </div>
+
+            <!-- Image Detail & Info -->
+            <div class="flex flex-col md:flex-row items-center gap-12 bg-sage-50 rounded-3xl overflow-hidden shadow-sm">
+                <div class="w-full md:w-1/2 h-64 md:h-[500px]">
+                    <img src="https://placehold.co/800x1000/8f9e86/ffffff?text=Texture+Serum" alt="Serum Texture" class="w-full h-full object-cover">
+                </div>
+                <div class="w-full md:w-1/2 p-8 md:p-12">
+                    <h3 class="font-serif text-2xl md:text-3xl font-bold mb-4">Cảm nhận luồng ánh sáng mới</h3>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sage-800">Chất serum lỏng nhẹ, ráo mịn ngay khi chạm vào da, không gây nhờn rít.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sage-800">Hương thơm thảo mộc nhè nhẹ mang lại cảm giác thư giãn như đang ở Spa.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-amber-500 mr-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span class="text-sage-800">Bảo vệ cấu trúc da khỏi gốc tự do, làm mờ thâm sạm chỉ sau 2 tuần.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Promotion Section (Combo) -->
+    <section class="py-20 relative overflow-hidden bg-[#faf7f2]">
+        <!-- Decor blobs -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-amber-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-sage-200 rounded-full blur-3xl opacity-40 translate-y-1/2 -translate-x-1/4"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50/50 border border-amber-200/60 rounded-3xl p-8 md:p-12 shadow-xl flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-5/12 relative">
+                    <div class="absolute top-4 left-4 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide z-10 animate-bounce">
+                        Hot Deal
+                    </div>
+                    <img src="https://placehold.co/600x600/d97736/ffffff?text=Combo+Glow+%26+Lift" alt="Combo Glow & Lift" class="w-full rounded-2xl shadow-lg border-2 border-white">
+                </div>
+                
+                <div class="w-full md:w-7/12 text-center md:text-left">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-amber-600 mb-2">Combo GLOW & LIFT</h2>
+                    <p class="text-sage-900 font-medium text-lg mb-6">Sáng Da Rực Rỡ - Nâng Cơ Trẻ Hóa</p>
+                    
+                    <div class="bg-white/60 backdrop-blur rounded-xl p-5 mb-8 border border-white">
+                        <p class="text-sage-800 mb-2 font-medium">Mua 01 Luminous Serum (30ml) TẶNG NGAY:</p>
+                        <ul class="text-left space-y-2 text-sm text-sage-800">
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">🎁</span> 01 Đá Massage Gua Sha Ngọc Bích (Giúp đẩy tinh chất, nâng cơ mặt)</li>
+                            <li class="flex items-center"><span class="text-amber-500 mr-2">🎁</span> 01 Băng đô cài tóc mềm mại chuyên dụng skincare</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex items-end justify-center md:justify-start gap-4 mb-8">
+                        <span class="text-gray-400 line-through text-lg">699.000đ</span>
+                        <span class="text-4xl font-bold text-red-500">399.000đ</span>
+                    </div>
+                    
+                    <a href="#order" class="inline-block w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-white font-semibold py-4 px-10 rounded-full text-lg transition-transform transform hover:scale-105 shadow-lg text-center">
+                        Nhận Ưu Đãi Ngay
+                    </a>
+                    <p class="text-xs text-sage-800/60 mt-3">*Freeship toàn quốc cho 50 đơn hàng đầu tiên</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Order Form Section -->
+    <section id="order" class="py-24 bg-sage-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-sand">Bắt đầu hành trình tỏa sáng</h2>
+                <p class="text-sage-100/80">Điền thông tin dưới đây để chuyên viên của Luminous chuẩn bị gói quà xinh xắn gửi đến bạn nhé!</p>
+            </div>
+
+            <!-- Khung thông báo thành công (ẩn mặc định) -->
+            <div id="success-message" class="hidden bg-sage-800/50 border border-sage-500 rounded-2xl p-8 text-center animate-fade-in">
+                <div class="w-16 h-16 bg-sage-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <h3 class="font-serif text-2xl font-bold mb-2">Đặt hàng thành công!</h3>
+                <p class="text-sage-100">Cảm ơn bạn đã lựa chọn LUMINOUS. Đơn hàng của bạn đang được chuẩn bị và sẽ sớm được giao. Chuyên viên sẽ gọi điện xác nhận trong vòng 24h tới.</p>
+            </div>
+
+            <!-- Form đặt hàng -->
+            <form id="checkout-form" class="bg-white rounded-3xl p-8 md:p-10 shadow-2xl text-sage-900" onsubmit="submitForm(event)">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-sage-800 mb-2">Họ và tên *</label>
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all bg-gray-50 focus:bg-white" placeholder="VD: Nguyễn Văn A">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-sage-800 mb-2">Số điện thoại *</label>
+                        <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all bg-gray-50 focus:bg-white" placeholder="VD: 0912 345 678">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="address" class="block text-sm font-medium text-sage-800 mb-2">Địa chỉ nhận hàng *</label>
+                    <input type="text" id="address" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-amber-500 focus:ring-2 focus:ring-amber-200 outline-none transition-all bg-gray-50 focus:bg-white" placeholder="Số nhà, Đường, Phường/Xã, Quận/Huyện, Tỉnh/Thành phố">
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-sage-800 mb-3">Lựa chọn sản phẩm *</label>
+                    
+                    <label class="flex items-center p-4 border border-amber-300 bg-amber-50 rounded-xl cursor-pointer mb-3 relative overflow-hidden transition-colors hover:bg-amber-100">
+                        <input type="radio" name="product" value="combo" checked class="w-5 h-5 text-amber-500 border-gray-300 focus:ring-amber-500">
+                        <div class="ml-4 flex-1">
+                            <span class="block font-semibold text-sage-900 text-lg">Combo "GLOW & LIFT" (Hot 🔥)</span>
+                            <span class="block text-sm text-sage-800/80">1 Serum + 1 Gua Sha Ngọc Bích + 1 Băng đô</span>
+                        </div>
+                        <span class="font-bold text-red-500 text-lg">399.000đ</span>
+                    </label>
+
+                    <label class="flex items-center p-4 border border-gray-200 rounded-xl cursor-pointer transition-colors hover:bg-gray-50">
+                        <input type="radio" name="product" value="single" class="w-5 h-5 text-amber-500 border-gray-300 focus:ring-amber-500">
+                        <div class="ml-4 flex-1">
+                            <span class="block font-semibold text-sage-900 text-lg">Chỉ mua 1 Luminous Serum (30ml)</span>
+                            <span class="block text-sm text-sage-800/80">Không áp dụng quà tặng</span>
+                        </div>
+                        <span class="font-bold text-sage-900 text-lg">429.000đ</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-sage-900 hover:bg-sage-800 text-white font-semibold py-4 rounded-xl text-lg transition-all shadow-lg hover:shadow-xl flex justify-center items-center">
+                    Xác nhận đặt hàng
+                </button>
+                <p class="text-center text-sm text-gray-500 mt-4">🔒 Thông tin của bạn được bảo mật tuyệt đối.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sand border-t border-sage-200 py-12 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="font-serif text-2xl font-bold text-sage-900 block mb-2">LUMINOUS</a>
+                <p class="text-sage-800/70 text-sm">Đánh thức vẻ đẹp nguyên bản.</p>
+            </div>
+            
+            <div class="flex space-x-6 text-sm text-sage-800 font-medium">
+                <a href="#" class="hover:text-amber-500 transition-colors">Chính sách giao hàng</a>
+                <a href="https://www.facebook.com/Cristiano?locale=vi_VN" target="_blank" class="text-stone-400 hover:text-white">Facebook</a>                
+                <a href="#" class="hover:text-amber-500 transition-colors">0123456789</a>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-xs text-sage-800/50 border-t border-sage-200/50 pt-8">
+            &copy; 2024 LUMINOUS Botanicals. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript xử lý Form (Không dùng alert) -->
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Ngăn trang reload
+            
+            // Ẩn form
+            document.getElementById('checkout-form').style.display = 'none';
+            
+            // Hiện thông báo thành công
+            const successMsg = document.getElementById('success-message');
+            successMsg.classList.remove('hidden');
+            
+            // Scroll mượt về vị trí thông báo
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
